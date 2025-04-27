@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+
+
+<html style="font-size: 4vw;">
+<meta charset="utf-8">
+
+
+<head>
+    <style media="screen">
+
+
+    .input {
+  display: inline;
+  width: 85%;
+  font-size: 35px;
+  font-family: Times;
+}
+
+        button {
+    padding: 12px 50px;
+    border: 1px outset buttonborder;
+    border-radius: 5px;
+    color: buttontext;
+    background-color: buttonface;
+    text-decoration: none;
+}
+
+      a.button1 {
+    padding: 50px 100px;
+    border: 3px outset buttonborder;
+    border-radius: 20px;
+    color: buttontext;
+    background-color: buttonface;
+    text-decoration: none;
+}
+      a.button2 {
+    padding: 50px 140px;
+    border: 3px outset buttonborder;
+    border-radius: 20px;
+    color: buttontext;
+    background-color: buttonface;
+    text-decoration: none;
+}
+
+         #divfix_field {
+       position: fixed;
+       z-index: 3000;
+       bottom: 93%;
+       left: 16%;
+        }
+
+         #divfix_button {
+       position: fixed;
+       z-index: 3000;
+       bottom: 93.2%;
+       left: 62%;
+        }
+
+        #divfix_bot_1 {
+       bottom: 8%;
+       left: 9%;
+       position: fixed;
+       z-index: 3000;
+        }
+
+        #divfix_bot_2 {
+       bottom: 8%;
+       left: 53%;
+       position: fixed;
+       z-index: 3000;
+        }
+
+        table {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.5vw;
+            margin: 0 auto;
+            border-collapse: separate;
+            border-spacing: 0.5em;
+            table-layout: fixed;
+        }
+        table td {
+            padding: 2px 0;
+            border: 3px solid black;
+            font-size: 9vw;
+            height: 30vw;
+            width: 100vw;
+<!--            text-align: center;-->
+        }
+
+         table td.photo {
+            padding: 1px 1;
+            border: 10px solid green;
+            font-size: 0vw;
+            height: 10vw;
+            width: 25vw;
+<!--            text-align: center;-->
+        }
+
+        input {
+          width: 20vw;
+         height: 8vw;
+         }
+
+        body h5{
+   margin: 15px;
+        }
+
+        body h6{
+   margin: 25px;
+        }
+
+    </style>
+</head>
+<body style="background-color: #BEDBB9; ">
+
+    <form action="/search/" method="get">
+
+        <div id="divfix_field">
+    <input class="input"; id=""; placeholder="        Поиск цветочка"
+           type="search";
+           size="25px;"; name="flower_name" value="" required
+    ></input> </div>
+
+    <div id="divfix_button">
+        <button type="submit" class="button" style="font-size: 38px;">Найти</button>
+    </div>
+
+    </form>
+
+<br><br><br>
+    <table >
+        {% for flower in flowers %}
+            <tr>
+                <td>
+                    <table style="font-family: corbel">
+                        <tr>
+                            <td class="photo"><img width="450vw" height="600vw" src="data:image/jpg;base64,{{flower.flower_picture}}"/></td>
+                            <td style="bottom: 100%; vertical-align:top; line-height: 30px">
+                                <center>
+                                </i></h><h5 style="font-size: 4vw"><i>{{flower.flower_name}}</i></h5>
+                                </center>
+                                <h6 style="font-size: 3vw;">Дата полива: {{flower.flower_watering}}</h6>
+                                <h6 style="font-size: 3vw;">Дней без полива: {{flower.wo_watering_days}}</h6>
+                                <h6 style="font-size: 3vw;">Дней между поливами: {{flower.watering_last_days}}</h6>
+                                <br><br><br><br><br><br><br>
+                                <h6 style="font-size: 3vw;">Дата добавления: {{flower.flower_create}}</h6>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+<br><br><br><br><br><br>
+<div id="divfix_bot_1"><a href="add_new_flower" class="button1">Добавить</a></div>
+
+<div id="divfix_bot_2"><a href="changes" class="button2">Уход</a></div>
+
+
+</body>
+</html>
