@@ -4,15 +4,22 @@ from app.core.save_flower_picture import GetNewFlower
 from app.core.main_page import MainPage
 from app.core.change_page import ChangePage, WateringPage, WateringSavePage
 from db.db_connector import DBConnect
+import logging
+
 
 application = Flask("flowers_website")
 db = DBConnect()
+
+logger = logging.Logger
+handler = logging.FileHandler('/logs/application.log')  # errors logged to this file
+handler.setLevel(logging.ERROR)  # only log errors and above
+application.logger.addHandler(handler)
 
 
 @application.route('/')
 def main():
     # return 'Привет малышка кисулька)'
-    1/0
+    print("return 'Привет малышка кисулька)'")
     return MainPage(db, render_template=render_template)
 
 
