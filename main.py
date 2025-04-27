@@ -11,8 +11,8 @@ db = DBConnect()
 
 @application.route('/')
 def main():
-    return 'Привет малышка кисулька)'
-    # return MainPage(db, render_template=render_template)
+    # return 'Привет малышка кисулька)'
+    return MainPage(db, render_template=render_template)
 
 
 @application.route('/search/', methods=['GET'])
