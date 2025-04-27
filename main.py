@@ -12,6 +12,7 @@ db = DBConnect()
 @application.route('/')
 def main():
     # return 'Привет малышка кисулька)'
+    1/0
     return MainPage(db, render_template=render_template)
 
 
@@ -50,5 +51,5 @@ def watering_page_post():
     return WateringSavePage(db=db, render_template=render_template, request=request)
 
 if __name__ == '__main__':
-    application.run(host="0.0.0.0")
-    # app.run(host="192.168.1.10", port=5000, debug=False)
+    application.run(host="0.0.0.0", debug=True)
+    # application.run(host="192.168.1.14", port=5000, debug=False)
