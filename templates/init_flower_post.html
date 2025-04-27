@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+
+<meta charset="utf-8">
+<html style="font-size: 4vw;">
+
+
+<head>
+    <style media="screen">
+            .outer {
+    margin-top: 50%
+}
+
+
+   #root {transform: scale(130%)}
+
+
+  .some_but {
+    padding: 15px 50px;
+    border: 3px outset buttonborder;
+    border-radius: 20px;
+    color: buttontext;
+    background-color: buttonface;
+    text-decoration: none;
+    font-size: 3vw;
+}
+
+    input { width: 38vw;
+         height: 4vw;
+         }
+
+
+
+    </style>
+
+    <div id="root">
+</head>
+<body style="background-color: #BEDBB9;">
+<div class="outer">
+    <center>
+        <h2>Добавь новый цветочек</h2>
+    </center>
+</div>
+<center>
+
+<form action="add_new_flower_post" method="post" enctype="multipart/form-data">
+    <label for="flower_name">Название цветочка: </label>
+    <input id="flower_name" name="flower_name" type="text" />
+    <br><br><label for="file">Фото цветочка:</label>
+
+    <input id="file" name="flower_img" type="file" />
+
+
+    <br> <br><br><br><button class="some_but">Добавить</button>
+
+
+    </center>
+
+</form>
+</body>
+</div>
+</html>
