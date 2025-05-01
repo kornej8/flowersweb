@@ -4,17 +4,10 @@ from app.core.save_flower_picture import GetNewFlower
 from app.core.main_page import MainPage
 from app.core.change_page import ChangePage, WateringPage, WateringSavePage
 from db.db_connector import DBConnect
-import logging
 
 
 application = Flask("flowers_website")
 db = DBConnect()
-
-logger = logging.Logger
-handler = logging.FileHandler('/logs/application.log')  # errors logged to this file
-handler.setLevel(logging.ERROR)  # only log errors and above
-application.logger.addHandler(handler)
-
 
 @application.route('/')
 def main():
@@ -59,4 +52,4 @@ def watering_page_post():
 
 if __name__ == '__main__':
     application.run(host="0.0.0.0", debug=True)
-    # application.run(host="192.168.1.14", port=5000, debug=False)
+    # application.run(host="192.168.1.12", port=5000, debug=False)
