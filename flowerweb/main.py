@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for
-from app.core.init_flower import AddFlowerPage
-from app.core.save_flower_picture import GetNewFlower
-from app.core.main_page import MainPage
-from app.core.change_page import ChangePage, WateringPage, WateringSavePage
-from db.db_connector import DBConnect
+from flowerweb.app.core.init_flower import AddFlowerPage
+from flowerweb.app.core.save_flower_picture import GetNewFlower
+from flowerweb.app.core.main_page import MainPage
+from flowerweb.app.core.change_page import ChangePage, WateringPage, WateringSavePage
+from flowerweb.db.db_connector import DBConnect
 
 
 application = Flask("flowers_website")
@@ -52,4 +52,5 @@ def watering_page_post():
 
 if __name__ == '__main__':
     application.run(host="80.249.144.248", port=5000)
-    # application.run(host="192.168.1.12", port=5000, debug=False)
+    application.run()
+    application.run()

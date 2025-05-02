@@ -1,0 +1,1 @@
+from flowerweb.main import  application

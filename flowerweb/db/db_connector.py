@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
-from db.connection_init import ConnectionInit
-from config.init_config import Config
+from flowerweb.db.connection_init import ConnectionInit
+from flowerweb.config.init_config import Config
 
 
 class InitDBConnect:

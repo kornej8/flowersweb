@@ -1,6 +1,6 @@
 from sqlalchemy import text
 from datetime import datetime
-from app.core.queries import (select_checkbox_flower,
+from flowerweb.app.core.queries import (select_checkbox_flower,
                               select_last_watering,
                               insert_watering)
 

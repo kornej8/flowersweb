@@ -1,8 +1,8 @@
 import os
 import io
 from PIL import Image
-from app.core.queries import (insert_new_picture, insert_new_flower)
-from app.core.check_save_request import check_request
+from flowerweb.app.core.queries import (insert_new_picture, insert_new_flower)
+from flowerweb.app.core.check_save_request import check_request
 from sqlalchemy import text
 
 

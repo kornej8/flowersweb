@@ -1,7 +1,7 @@
 import io
 import base64
 from sqlalchemy import text
-from app.core.queries import (select_flowers)
+from flowerweb.app.core.queries import (select_flowers)
 
 class _MainPage:
 
