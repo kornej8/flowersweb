@@ -4,7 +4,8 @@ from flowerweb.app.core.save_flower_picture import GetNewFlower
 from flowerweb.app.core.main_page import MainPage
 from flowerweb.app.core.change_page import ChangePage, WateringPage, WateringSavePage
 from flowerweb.db.db_connector import DBConnect
-
+import sys
+sys.path.append('/var/www/flowerweb/flowerweb/flowerweb/lib/python3.11/site-packages')
 
 application = Flask("flowers_website")
 db = DBConnect()
