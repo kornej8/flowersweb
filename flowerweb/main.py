@@ -51,6 +51,5 @@ def watering_page_post():
     return WateringSavePage(db=db, render_template=render_template, request=request)
 
 if __name__ == '__main__':
-    application.run(host="80.249.144.248", port=5000)
-    application.run()
+    # application.run(host="80.249.144.248", port=5000)
     application.run()
