@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d51561d-ec06-47ab-a7be-892f20778e34" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/secrets/.pg_host" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secrets/.pg_user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/secrets/.pg_pass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowerweb/config/cfg.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/config/cfg.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
