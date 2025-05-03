@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d51561d-ec06-47ab-a7be-892f20778e34" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flowers_web_start.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowers_web_start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flowerweb/config/cfg.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/config/cfg.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flowerweb/config/init_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/config/init_config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flowerweb/db/connection_init.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/db/connection_init.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flowerweb/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/main.py" afterDir="false" />
     </list>
@@ -124,7 +121,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/flowerweb/db/connection_init.py</url>
-          <line>18</line>
+          <line>13</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
