@@ -1,5 +1,3 @@
 flowers_web_start.py
 flowerweb.wsgi
-secrets/.pg_pass
-secrets/.pg_host
-secrets/.pg_user
+secrets/
