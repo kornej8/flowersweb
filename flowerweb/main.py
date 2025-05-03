@@ -1,3 +1,4 @@
+import os.path
 from flask import Flask, render_template, request, redirect, url_for
 from flowerweb.app.core.init_flower import AddFlowerPage
 from flowerweb.app.core.save_flower_picture import GetNewFlower
@@ -5,13 +6,12 @@ from flowerweb.app.core.main_page import MainPage
 from flowerweb.app.core.change_page import ChangePage, WateringPage, WateringSavePage
 from flowerweb.db.db_connector import DBConnect
 
-application = Flask("flowers_website")
+template_path = os.path.join(os.path.dirname(__file__), 'templates')
+application = Flask("flowers_website", template_folder=template_path)
 db = DBConnect()
 
 @application.route('/')
 def main():
-    # return 'Привет малышка кисулька)'
-    print("return 'Привет малышка кисулька)'")
     return MainPage(db, render_template=render_template)
 
 
@@ -50,5 +50,5 @@ def watering_page_post():
     return WateringSavePage(db=db, render_template=render_template, request=request)
 
 if __name__ == '__main__':
-    # application.run(host="192.168.1.7", port=5000)
-    application.run()
+    application.run(host="192.168.1.7", port=5000)
+    # application.run()

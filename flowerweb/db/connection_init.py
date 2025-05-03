@@ -10,8 +10,12 @@ class ConnectionInit:
 
         config_by=config.get(by, {})
 
+        print(config_by)
+
         user = config_by.get('user')
+
         host = config_by.get('host')
+        print(config_by)
         port = config_by.get('port')
         password = config_by.get('password')
         db_name = config_by.get('db_name')
@@ -24,4 +28,5 @@ class ConnectionInit:
             password=password,
             db_name=db_name
         )
+        print(url_string)
         return url_string

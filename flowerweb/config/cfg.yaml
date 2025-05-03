@@ -1,6 +1,6 @@
 database:
   user: flower_secret:pg_pass
-  host: flower_secret:host
+  host: flower_secret:pg_host
   port: 5432
   password: flower_secret:pg_pass
   db_name: flowers_core
