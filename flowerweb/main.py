@@ -4,8 +4,6 @@ from flowerweb.app.core.save_flower_picture import GetNewFlower
 from flowerweb.app.core.main_page import MainPage
 from flowerweb.app.core.change_page import ChangePage, WateringPage, WateringSavePage
 from flowerweb.db.db_connector import DBConnect
-import sys
-sys.path.append('/var/www/flowerweb/flowerweb/flowerweb/lib/python3.11/site-packages')
 
 application = Flask("flowers_website")
 db = DBConnect()
@@ -52,5 +50,5 @@ def watering_page_post():
     return WateringSavePage(db=db, render_template=render_template, request=request)
 
 if __name__ == '__main__':
-    # application.run(host="80.249.144.248", port=5000)
-    application.run()
+    application.run(host="192.168.1.7", port=5000)
+    # application.run()
