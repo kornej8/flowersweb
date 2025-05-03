@@ -16,7 +16,7 @@ class ConfigWithSecrets:
         secret_file = secret_code.lstrip(self.secret_keyword).replace(':', '.')
         try:
             with open(f'{self.secret_folder}/{secret_file}') as f:
-                return f.readline()
+                return f.readline().strip()
         except FileNotFoundError as e:
             raise SecretFounderException(f"Didnt find {secret_code} in secrets/{secret_file}")
 
