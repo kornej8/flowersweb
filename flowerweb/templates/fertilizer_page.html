@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+
+<meta charset="utf-8">
+<html style="font-size: 4vw;">
+<style media="screen">
+            .outer {
+    margin-top: 5%
+}
+
+
+   #root {transform: scale(100%)}
+
+
+    p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 1rem;
+}
+
+input.fertilizer { width: 55vw;
+         height: 12vw;
+         }
+
+    input[type=checkbox]
+{
+  -ms-transform: scale(5);
+  -moz-transform: scale(5);
+  -webkit-transform: scale(5);
+  -o-transform: scale(5);
+  transform: scale(5);
+  padding: 10px;
+  vertical-align: center;
+}
+
+/* Might want to wrap a span around your checkbox text */
+input
+{
+  /* Checkbox text */
+  font-size: 200%;
+  display: inline;
+}
+
+
+
+
+</style>
+<div id="root">
+    <body style="background-color: #BEDBB9;">
+
+    <div class="outer">
+        <form action="fertilizer" method="post">
+            <center>
+                <h2 style="font-size: 5.5vw">Выбери цветочки, которых удобрили:</h2>
+
+                    <br><br><label for="fertilizer_name">Удобрение: </label>
+    <input class="fertilizer" id="fertilizer_name" name="fertilizer_name" type="text" />
+
+                <br><br>{% for flower in data %}
+                <p style="font-size: 5vw"><input
+                        type="checkbox"
+                        name="fertilizer"
+                        value="{{flower.flower_id}}">
+                    <b>{{flower.flower_name}}</b> (от <i>{{flower.flower_creation}}</i>)
+                </p>
+                {% endfor %}
+                <p><input type="submit" value="Удобрить"></p>
+            </center>
+        </form>
+    </div>
+    </body>
+
+</html>

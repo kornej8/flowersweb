@@ -1,5 +1,5 @@
 import io
-from flowerweb.app.core.queries import (insert_new_picture, insert_new_flower)
+from flowerweb.app.core.queries import (insert_new_picture, insert_new_flower, update_watering_rate)
 from flowerweb.app.core.check_save_request import check_request
 from sqlalchemy import text
 
@@ -51,6 +51,17 @@ class SaveFromRequest:
             con.commit()
 
 
+    @classmethod
+    def save_watering_rate(cls, db, request, id):
+        watering_rate = request.values['flower_watering_days']
+        print(id)
+        with db.connect() as con:
+            values = {
+                'id': id,
+                'watering_rate': watering_rate
+            }
+            con.execute(text(update_watering_rate), values)
+            con.commit()
 
 class _AddedFlowerPage:
     INDEX_PAGE = '/added_flower_page.html'
@@ -93,4 +104,5 @@ class GetNewFlower:
     def __new__(cls, db, request, render_template):
         name = SaveFromRequest.save_flower_name(db=db, request=request)
         picture = SaveFromRequest.save_picture(db=db, request=request, id=name)
+        watering_rate = SaveFromRequest.save_watering_rate(db=db, request=request, id=name)
         return AddedFlowerPage(name=name, picture=picture, render_template=render_template)

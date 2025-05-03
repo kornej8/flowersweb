@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d51561d-ec06-47ab-a7be-892f20778e34" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/flowerweb/templates/fertilizer_added_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flowerweb/templates/fertilizer_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowers_web_start.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowers_web_start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowerweb/app/core/change_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/app/core/change_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowerweb/app/core/main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/app/core/main_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowerweb/app/core/queries.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/app/core/queries.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowerweb/app/core/save_flower_picture.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/app/core/save_flower_picture.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowerweb/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowerweb/templates/added_flower_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/templates/added_flower_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowerweb/templates/changes_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/templates/changes_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowerweb/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowerweb/templates/init_flower_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/templates/init_flower_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowerweb/templates/watering_added_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/templates/watering_added_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

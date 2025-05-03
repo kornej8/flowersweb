@@ -26,7 +26,9 @@ class _MainPage:
             'flower_create': flower[2],
             'flower_watering': flower[3],
             'wo_watering_days': flower[4],
-            'watering_last_days': flower[5]
+            'watering_last_days': flower[5],
+            'fertilizer_date': flower[6],
+            'fertilizer_name': flower[7]
         }
 
 
