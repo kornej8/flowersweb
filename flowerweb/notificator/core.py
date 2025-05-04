@@ -7,7 +7,7 @@ from notification import SendNotification
 from eventer import Eventer
 from flowerweb.config.init_config import Config
 
-cron = "13/14/15/16/17/18/19/20/21/22/23 * 0/30"  # как часто проверяет событыия в базе
+cron = "13/14/15/16/17/18/19/20/21/22/23 0/30 0"  # как часто проверяет событыия в базе
 
 config_section = Config().setup().get('notificator')
 telebot = config_section.get('telebot')
