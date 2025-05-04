@@ -40,3 +40,5 @@ class Config:
         with open(self.cfg_path, 'r') as cfg:
             cfg = ConfigWithSecrets(yaml.safe_load(cfg))
         return cfg
+    def setup(self):
+        return self.get()

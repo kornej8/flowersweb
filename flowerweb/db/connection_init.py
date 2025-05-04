@@ -31,7 +31,4 @@ class ConnectionInit:
             password=password,
             db_name=db_name
         )
-
-        print(url_string)
-
         return url_string

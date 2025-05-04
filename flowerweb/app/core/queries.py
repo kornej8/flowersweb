@@ -85,3 +85,7 @@ INSERT INTO flowers_core.flowers_fertilizer
  (id, fertilizer_date, prev_fertilizer_date, fertilizer_name) 
  VALUES (:id, :fertilizer_date, :prev_fertilizer_date, :fertilizer_name)
 """
+
+thirst_flowers = """
+select flower_name from flowers_core.flowers_core.flowers_thirst
+"""

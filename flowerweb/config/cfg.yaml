@@ -5,3 +5,7 @@ database:
   password: flower_secret:pg_pass
   db_name: flowers_core
 
+notificator:
+  url: flower_secret:url
+  telebot: flower_secret:token
+  recipient: flower_secret:recipient
