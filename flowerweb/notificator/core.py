@@ -25,7 +25,6 @@ notificator.registrate_event(Eventer.events)
 
 for events in Scheduler(notificator):
     Scheduler.check_event_status()
-    print(Scheduler.time)
     if Scheduler.run_events:
         for event in events:
             Eventer.run(event)
