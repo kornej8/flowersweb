@@ -1,3 +1,6 @@
+import os
+import sys
+sys.path += [os.path.dirname(os.path.dirname(os.path.dirname(__file__)))]
 from scheduler import Scheduler
 from notificator import Notificator
 from notification import SendNotification
@@ -22,6 +25,7 @@ notificator.registrate_event(Eventer.events)
 
 for events in Scheduler(notificator):
     Scheduler.check_event_status()
+    print(Scheduler.time)
     if Scheduler.run_events:
         for event in events:
             Eventer.run(event)
