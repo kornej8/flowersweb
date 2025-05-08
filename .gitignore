@@ -2,3 +2,4 @@ flowers_web_start.py
 flowerweb.wsgi
 secrets/
 .htaccess
+flowerweb/.htaccess
