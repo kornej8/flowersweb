@@ -30,7 +30,7 @@ class SendNotification:
         self.ids = [int(id) for id in id.split()]
 
     def create_link(self, flower_name: str):
-        url = f"{self.url}/{flower_name}"
+        url = f"{self.url}{flower_name}"
         link_template = '<a href="{url}">{caption}</a>'
         return link_template.format(
             url=url,
