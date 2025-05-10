@@ -14,6 +14,7 @@ class Runner:
     @classmethod
     def run(cls, message, admins, bot):
         command = message.text.replace('/', '')
+        command = command.split()[0]
 
         handler = cls(message=message, bot=bot)
 
