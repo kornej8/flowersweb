@@ -36,17 +36,7 @@ class Runner:
 
         return wrapper
 
-
-class Handler(Runner):
-
-    def ping(self):
-        self.bot.send_message(chat_id=self.chat_id, text='pong!')
-
-    @Runner.for_admins
-    def restart(self):
-
-        cmd = "sudo systemctl restart apache2.service"
-
+    def cmd_runner(self, cmd):
         with subprocess.Popen(
                 cmd,
                 stdout=subprocess.PIPE,
@@ -69,3 +59,25 @@ class Handler(Runner):
             )
 
             self.bot.send_message(chat_id=self.chat_id, text=exc)
+        else:
+            self.bot.send_message(chat_id=self.chat_id, text="all fine!")
+
+class Handler(Runner):
+
+    def ping(self):
+        self.bot.send_message(chat_id=self.chat_id, text='pong!')
+
+    @Runner.for_admins
+    def restart(self):
+        cmd = "sudo systemctl restart apache2.service"
+        self.cmd_runner(cmd)
+
+    @Runner.for_admins
+    def stop(self):
+        cmd = "sudo systemctl stop apache2.service"
+        self.cmd_runner(cmd)
+
+    @Runner.for_admins
+    def start(self):
+        cmd = "sudo systemctl start apache2.service"
+        self.cmd_runner(cmd)
