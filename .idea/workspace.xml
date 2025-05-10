@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9d51561d-ec06-47ab-a7be-892f20778e34" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flowerweb/flower_assistent/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/flower_assistent/commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowers_web_start.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowers_web_start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowerweb/app/core/main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/app/core/main_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowerweb/app/core/queries.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/app/core/queries.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowerweb/migration.sql" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/migration.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowerweb/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flowerweb/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +50,7 @@
       <recent name="F:\Python\flowersweb\app" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.core assist">
+  <component name="RunManager" selected="Python.run app">
     <configuration name="core assist" type="PythonConfigurationType" factoryName="Python">
       <module name="flowersweb" />
       <option name="INTERPRETER_OPTIONS" value="" />

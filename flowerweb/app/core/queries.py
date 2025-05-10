@@ -42,7 +42,16 @@ coalesce(to_char(watering_date, 'dd.mm.yyyy'), '—') as watering_date,
 current_date - coalesce(watering_date, f.dt::date) as days_without_watering,
 coalesce((watering_date - prev_watering_date)::varchar, '—') as days_between_previous_watering,
 coalesce(to_char(fertilizer_date, 'dd.mm.yyyy'), '—') as fertilizer_date,
-case when coalesce(fertilizer_name, '—') = '' then '—' else coalesce(fertilizer_name, '—') end as fertilizer_name
+case when coalesce(fertilizer_name, '—') = '' then '—' else coalesce(fertilizer_name, '—') end as fertilizer_name,
+coalesce('Поливать раз в ' || "substring"(f.watering_rate::text, '\d+'::text)::varchar
+|| ' ' || 
+case 
+	when "substring"(f.watering_rate::text, '\d+'::text)::varchar = '1' then 'день' 
+	when "substring"(f.watering_rate::text, '\d+'::text)::varchar in ('2', '3', '4') then 'день' 
+	else 'дней'
+end
+, 
+'Не поливать :(') as watering_rate
 from flowers_core.flowers f
 left join flowers_core.flower_pictures using (id)
 left join last_watering using (id)

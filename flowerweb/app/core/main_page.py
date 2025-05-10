@@ -28,7 +28,8 @@ class _MainPage:
             'wo_watering_days': flower[4],
             'watering_last_days': flower[5],
             'fertilizer_date': flower[6],
-            'fertilizer_name': flower[7]
+            'fertilizer_name': flower[7],
+            'fertilizer_watering_rate': flower[8]
         }
 
 
