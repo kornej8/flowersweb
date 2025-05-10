@@ -81,3 +81,10 @@ class Handler(Runner):
     def start(self):
         cmd = "sudo systemctl start apache2.service"
         self.cmd_runner(cmd)
+
+    @Runner.for_admins
+    def status(self):
+        cmd = "sudo systemctl status apache2.service"
+        self.cmd_runner(cmd)
+
+
