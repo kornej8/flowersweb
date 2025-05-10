@@ -50,7 +50,8 @@ class Runner:
             for line in iter(submit_sp.stdout):
                 line = line.strip()
                 time.sleep(0.5)
-                self.bot.send_message(chat_id=self.chat_id, text=line)
+                if len(line) > 0:
+                    self.bot.send_message(chat_id=self.chat_id, text=line)
 
             returncode = submit_sp.wait()
 
