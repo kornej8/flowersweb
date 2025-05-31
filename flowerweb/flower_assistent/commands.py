@@ -64,6 +64,8 @@ class Runner:
         else:
             self.bot.send_message(chat_id=self.chat_id, text="all fine!")
 
+
+
 class Handler(Runner):
 
     def ping(self):
@@ -89,4 +91,7 @@ class Handler(Runner):
         cmd = "sudo systemctl status apache2.service"
         self.cmd_runner(cmd)
 
-
+    @Runner.for_admins
+    def log(self):
+        cmd = "ls /var/log/apache2/"
+        self.cmd_runner(cmd)

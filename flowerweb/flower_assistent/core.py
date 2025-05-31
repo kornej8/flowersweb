@@ -18,4 +18,7 @@ def handler(message):
 
 
 if __name__ == '__main__':
-    bot.polling()
+    try:
+        bot.polling()
+    except Exception as e:
+        bot.send_message(chat_id=720721680, text="bot runner occurred error. restarting...")
